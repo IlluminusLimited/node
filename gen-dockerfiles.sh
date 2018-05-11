@@ -7,7 +7,7 @@ sortedVersions=( $(
 		echo "$version"
 	done | sort --reverse) )
 
-repo="pinster/awseb:"
+repo="pinster/node:"
 
 # prepare file
 echo "#!/usr/bin/env bash" > build-images.sh

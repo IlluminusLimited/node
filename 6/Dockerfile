@@ -8,8 +8,7 @@ ADD etc/nodesource.gpg.key /etc
 
 WORKDIR /tmp
 
-RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-
+# TODO: Figure out how to install node with a version argument.
 ENV NODE_VERSION=6
 
 RUN yum -y install gcc-c++ && \
