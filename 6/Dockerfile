@@ -10,7 +10,7 @@ WORKDIR /tmp
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
-ENV NODE_VERSION=%%NODE_VERSION%%
+ENV NODE_VERSION=6
 
 RUN yum -y install gcc-c++ && \
     rpm --import /etc/nodesource.gpg.key && \
