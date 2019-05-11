@@ -9,11 +9,11 @@ ADD etc/nodesource.gpg.key /etc
 WORKDIR /tmp
 
 # TODO: Figure out how to install node with a version argument.
-ENV NODE_VERSION=6
+ENV NODE_VERSION=8.10
 
 RUN yum -y install gcc-c++ ruby24 && \
     rpm --import /etc/nodesource.gpg.key && \
-    curl --location --output ns.rpm https://rpm.nodesource.com/pub_6.x/el/7/x86_64/nodejs-6.10.1-1nodesource.el7.centos.x86_64.rpm && \
+    curl --location --output ns.rpm https://rpm.nodesource.com/pub_8.x/el/7/x86_64/nodejs-8.10.0-1nodesource.x86_64.rpm && \
     rpm --checksig ns.rpm && \
     rpm --install --force ns.rpm && \
     npm cache clean --force && \
