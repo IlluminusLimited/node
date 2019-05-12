@@ -11,8 +11,6 @@ WORKDIR /tmp
 # TODO: Figure out how to install node with a version argument.
 ENV NODE_VERSION=%%NODE_VERSION%%
 
-RUN amazon-linux-extras
-
 RUN amazon-linux-extras install -y ruby2.4 && \
     yum -y install gcc-c++ tar gzip git ruby-devel && \
     rpm --import /etc/nodesource.gpg.key && \
